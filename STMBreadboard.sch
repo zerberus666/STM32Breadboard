@@ -9299,6 +9299,9 @@ Source: www.kingbright.com</description>
 <part name="LED4" library="led" deviceset="LED" device="SML0805"/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="R1206" value="330"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
+<part name="JP8" library="pinhead" deviceset="PINHD-1X2" device="" value="3VOUT"/>
+<part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
+<part name="GND14" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9349,6 +9352,9 @@ Source: www.kingbright.com</description>
 <instance part="LED4" gate="G$1" x="124.46" y="81.28" rot="R90"/>
 <instance part="R6" gate="G$1" x="109.22" y="81.28" rot="R180"/>
 <instance part="GND13" gate="1" x="134.62" y="76.2"/>
+<instance part="JP8" gate="G$1" x="-68.58" y="86.36" rot="R180"/>
+<instance part="+3V6" gate="G$1" x="-55.88" y="93.98"/>
+<instance part="GND14" gate="1" x="-55.88" y="78.74"/>
 </instances>
 <busses>
 </busses>
@@ -9455,6 +9461,12 @@ Source: www.kingbright.com</description>
 <wire x1="129.54" y1="81.28" x2="134.62" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="81.28" x2="134.62" y2="78.74" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="JP8" gate="G$1" pin="1"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="-66.04" y1="83.82" x2="-55.88" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="83.82" x2="-55.88" y2="81.28" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$3" class="0">
 <segment>
@@ -9513,6 +9525,12 @@ Source: www.kingbright.com</description>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="81.28" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
 <label x="91.44" y="81.28" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP8" gate="G$1" pin="2"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
+<wire x1="-66.04" y1="86.36" x2="-55.88" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="86.36" x2="-55.88" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PA14" class="0">
